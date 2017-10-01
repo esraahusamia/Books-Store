@@ -10,7 +10,33 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 var port = 1128;
+var searchresult;
+
 app.use(express.static(__dirname+'/client'));
+app.post('/search',function (req,res){
+	var searchtoken =req.body.token;
+    //res.json(searchtoken)
+	Book.find({title:searchtoken},function(err, result){
+       searchresult=result;
+        console.log(searchresult);
+        res.json(result)
+       })
+    });
+
+	app.get('/',function (req,res){
+	
+	Book.find({},function(err, result){
+        //console.log(result);
+        res.send(result)
+    })
+	// Book.find().exec(function(err, result){
+ //       //searchresult=result;
+
+ //       console.log(result[0]);
+ //    });
+	// res.send(searchresult[0]);
+})
+
 
  // var book=new Book({title:'Personal Confidence & Motivation',auther:'MTD Training',descreption:' is book has been written to help you become more successful in sales.',image:'/images/personal-confidence-and-motivation.jpg',path:'/pdf/personal-confidence-and-motivation.pdf',gener:'Personal Development',rating:0});
      
@@ -22,6 +48,7 @@ app.use(express.static(__dirname+'/client'));
       //  console.log(result);
       // });
 app.listen(port, function() {
+
 	//console.log(Book)
   console.log(`listening on port ${port}`);
    
