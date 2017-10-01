@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html ng-app ="book-store">
+<html >
 <head>
 	<title>Book Store </title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<script src="/bower_components/jquery/dist/jquery.js"></script>
-	<script src="/bower_components/angular/angular.js"></script>
+	<script src="angular.min.js"></script>
+	<script
+ src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
-	<script src="/controllers/books.js"></script>
+	<script src="controller/app.js"></script>
+	<script src="controller/books.js"></script>
+	<script src="controller/book.js"></script>
 </head>
-<body>
+<body ng-app ="book-store">
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
@@ -53,7 +56,8 @@
 	</div>
 
 </div>
-
+<div  >
+	 <app></app></div>
 <!-- <div ng-init = "books=[{name:'book1',description:'ggggggggggg'},{name:'book2',description:'ggggggggggg'},{name:'book3',description:'ggggggggggg'}]">
 	
 		<p ng-repeat="book in books">

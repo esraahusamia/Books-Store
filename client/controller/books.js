@@ -1,9 +1,9 @@
-angular.module('book-store',[])
+angular.module('book-store')
 .component('books',{
  
 
 
 
 
-	templateUrl: 'templates/books.html'
+	template: `<h1><book/></h1>`
 })

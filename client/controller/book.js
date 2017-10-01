@@ -1,9 +1,19 @@
-angular.module('book-store',[])
+angular.module('book-store')
 .component('book',{
  
 
 
 
 
-	templateUrl: 'templates/book.html'
+	template:`<li >
+      <div >
+     <img ng-src= />
+     </div>
+    <div >
+   <div >
+   name
+   </div>
+   <div >description</div>
+ </div>
+</li>`
 })
