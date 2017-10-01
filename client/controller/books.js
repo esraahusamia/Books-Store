@@ -1,9 +1,23 @@
-angular.module('book-store',[])
+angular.module('book-store')
 .component('books',{
- 
+
+ //    bindings: {
+	// 	books:'<'
+	// },
+
+	controller: function(){
+		this.books=window.BooksData ;
+	},
 
 
-
-
-	templateUrl: 'templates/books.html'
+	template: `<ul>
+	<book/></ul>`
+	
 })
+
+// `<ul >
+// 	<book ng-repeat="book in $ctrl.books"  
+// 	book="book"/></ul>`
+
+
+	// template: '<div><book/><div>'
