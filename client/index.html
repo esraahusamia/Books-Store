@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app ="book-store">
+<head>
+	<title>Book Store </title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script src="/controllers/books.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Bookstore</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<form class="form-inline my-2 my-lg-0">
+						<input  style="width: 650px ; margin-top: 9px" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						<button style=" margin-top: 9px" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						<input type="button" value="Login" 
+						style=" margin-top: 9px ; margin-left: 80px" 
+						class="btn btn-outline-success my-2 my-sm-0" 
+						type="submit"
+						onclick="window.location.href='templates/login.html'"/>
+						<input type="button" value="Sign Up" 
+						style=" margin-top: 9px ; margin-left:80px" 
+						class="btn btn-outline-success my-2 my-sm-0" 
+						type="submit"
+						onclick="window.location.href='templates/signup.html'"/>
+					</form>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- 	<div ng-view></div> -->
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- <div ng-init = "books=[{name:'book1',description:'ggggggggggg'},{name:'book2',description:'ggggggggggg'},{name:'book3',description:'ggggggggggg'}]">
+	
+		<p ng-repeat="book in books">
+			name:{{book.name}}<br>
+			descreption:{{book.description}}<br>
+		</p>
+
+</div> -->
+
+</body>
+</html>
